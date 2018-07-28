@@ -1,0 +1,22 @@
+<body>
+ <div class="container">
+  <div class="row">
+   <div class="col-lg-3" style="">
+    <h2>User info</h2>
+    <%= attachment_image_tag user, :image, :fill, 100, 100, fallback: "noimage.png" %>
+     <table class="table">
+      <tr>
+       <th>name</th>
+       <th><%= user.name %></th>
+      </tr>
+      <tr>
+       <th>introduction</th>
+       <th><%= user.caption %></th>
+      </tr>
+     </table>
+    <%= link_to "", edit_user_path(user), class: "edit_user_#{user.id} col-xs-12 btn btn-default glyphicon glyphicon-wrench" %>
+   </div>
+  </div>
+ </div>
+ 
+</body>
